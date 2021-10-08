@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body{
+    background-color: gray;
+}
+#container{
+    width: 100%;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  li {
+    float: left;
+  } 
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  li a:hover:not(.active) {
+    background-color:#04AA6D;
+  }
+  .active {
+    background-color: #04AA6D;
+  }
+  #icon{
+      font-size:20px;
+  }
+  #box{
+      width: 40%;
+      margin: auto;
+      margin-top: 20px;
+      background-color: white;
+  }
+  form{
+      width: 80%;
+      margin: auto;
+      padding-top:20px;
+  }
+  form label {
+      font-size: 20px;
+  }
+  form h1{
+      text-align: center;
+  }
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  input[type=submit]{
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+</style>
+</head>
+<body>
+    <div id="container">
+        <nav>
+            <ul>
+                <li><a href="addProduct.html">Home</a></li>
+                <li><a href="#">View Product</a></li>
+                <li><a href="#">Add Product</a></li>
+                <li style="float:right"><a class="active" href="#"><i id="icon" class="fa fa-shopping-cart">0</i>&nbsp;&nbsp;Cart</a></li>
+              </ul>
+        </nav>
+        <div id="box">
+            <form onsubmit="addProduct(event)">
+                <h1>Add Product</h1>
+                <label>Name </label>
+                <input type="text" id="name" placeholder="Enter Product Name"/>
+                <label>Brand</label>
+                <input type="text" id="brand" placeholder="Brand Image"/>
+                <label>MRP</label>
+                <input type="text" id="price" placeholder="Price"/>
+                <label>Image</label>
+                <input type="text" id="image" placeholder="Image Url"/>
+                <input type="submit" name="Submit"/>
+            </form>
+        </div>
+    </div>
+    <script src="addProduct.js"></script>
+</body>
+</html>
